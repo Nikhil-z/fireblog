@@ -5,18 +5,29 @@ module.exports = function(grunt) {
         separator: ';'
       },
       basic: {
-        src: ['app/js/*.js'],
-        dest: 'fireblog.js'
+        src: ['lib/js/*.js'],
+        dest: 'dst/fireblog.js'
       },
-      extras: {
+      blogLib: {
         src: [
-          'app/components/angular/angular.min.js',
-          'app/components/firebase/lib/firebase.js',
-          'app/angularfire/angularfire.js',
-          'app/components/angular-route/angular-route.min.js',
-          'app/components/firebase/lib/firebase-simple-login.js'
+          'lib/components/angular/angular.min.js',
+          'lib/components/firebase/lib/firebase.js',
+          'lib/components/angularfire/angularfire.min.js',
+          'lib/components/angular-route/angular-route.min.js'
         ],
-        dest: 'lib.js'
+        dest: 'dst/blog-lib.js'
+      },
+      adminLib: {
+        src: [
+          'lib/components/angular/angular.min.js',
+          'lib/components/firebase/lib/firebase.js',
+          'lib/components/angularfire/angularfire.min.js',
+          'lib/components/angular-route/angular-route.min.js',
+          'lib/components/firebase/lib/firebase-simple-login.js',
+          'lib/components/showndown/compressed/showdown.js',
+          'lib/components/angular-markdown-directive/markdown.js'
+        ],
+        dest: 'dst/admin-lib.js'
       }
     }
   });
