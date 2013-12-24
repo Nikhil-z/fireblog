@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app='fireblog'>
 <head>
   <meta charset='UTF-8'>
   <title>Fireblog</title>
   <link rel='stylesheet' href='app/components/foundation/css/normalize.css'>
-  <link rel='stylesheet' href='app/components/foundation/css/foundation.css'>
+  <link rel='stylesheet' href='app/components/foundation/css/normalize.css'>
+  <link rel='stylesheet' href='app/css/fonts.css'>
 </head>
-<body>
-  
+<body ng-controller='PostsController'>
+
+  <fireblog-template></fireblog-template> 
+
   <script src='app/components/angular/angular.js'></script>  
   <script src='app/components/firebase/lib/firebase.js'></script>  
   <script src='app/components/angularfire/angularfire.js'></script>  
   <script src='app/components/angular-route/angular-route.js'></script>
   <script src='app/components/handlebars/handlebars.js'></script>
   <script src='app/components/firebase/lib/firebase-simple-login.js'></script> 
+  
+  <script src='config.js'></script>
+  <script src='app/js/app.js'></script>
+  <script src='app/js/services.js'></script>
+  <script src='app/js/controllers.js'></script>
+  <script src='app/js/directives.js'></script>
 </body>
 </html>
