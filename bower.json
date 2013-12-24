@@ -1,0 +1,31 @@
+{
+  "name": "fireblog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/code-curve/fireblog",
+  "authors": [
+    "Dan Prince <dan@codecurve.net>"
+  ],
+  "description": "Firebase powered blog",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.0.3",
+    "foundation": "~5.0.2",
+    "handlebars": "~1.2.0",
+    "angular": "~1.2.6",
+    "firebase": "~1.0.1",
+    "angularfire": "~0.5.0",
+    "angular-route": "~1.2.6"
+  },
+  "resolutions": {
+    "angular": "1.2.6"
+  }
+}

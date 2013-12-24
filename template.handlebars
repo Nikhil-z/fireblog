@@ -1,0 +1,9 @@
+<h1>My Blog</h1>
+<ul class='posts'>
+  {{#each posts}}
+    <h3>{{this.title}}</h3>
+    <label>{{this.date}}</label>
+    <div>{{this.content}}</div>
+  {{/each}}
+</ul>
+

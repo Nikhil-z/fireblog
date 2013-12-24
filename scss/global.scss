@@ -1,0 +1,6 @@
+@import 'mixins';
+
+html, body {
+  @include reset;
+   
+}
