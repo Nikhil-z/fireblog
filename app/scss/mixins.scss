@@ -1,0 +1,9 @@
+@mixin reset {
+  padding:0;
+  margin:0;
+}
+
+@mixin max {
+  width:100%;
+  height:100%;
+}
