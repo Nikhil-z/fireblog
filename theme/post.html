@@ -1,9 +1,14 @@
-<div>
+<header>
+  <h1 class='logo'>{{name}}</h1>
+</header>
 
-  <h1>{{title}}</h1>
+<div class='main-post'>
+  <h1 class='post-header'>{{title}}</h1>
   <h6>{{date}}</h6>
+  <div class='divider'></div>
   <div>{{content}}</div>
-  <ul>
+  <div class='divider'></div>
+  <ul class='tags'>
     <li ng-repeat='tag in tags'>{{tag}}</li>
-  </ul>  
+  </ul>
 </div>

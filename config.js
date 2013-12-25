@@ -1,9 +1,9 @@
 var config = {
-  name: 'Dan\'s Blog',
-  subtitle: 'Endless ramblings',
+  name: 'FireBlog',
+  subtitle: 'Endless Possibilities',
   firebase: "http://fireblog.firebaseio.com",
   theme: {
     name:'theme',
-    styles: ['index.css', 'style.css']
+    styles: ['style.css']
   }
 }

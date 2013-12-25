@@ -1,0 +1,68 @@
+header {
+  background: #ff8400;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ff8400), color-stop(57%, #ff5200), color-stop(57%, #ff8400));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
+  /* W3C */
+  background-attachment:fixed;
+  height:200px;
+  box-shadow:inset 0 -3px 10px rgba(0,0,0,0.1); 
+}
+
+.logo {
+  margin:0;
+  padding:0;
+  color:#fff;
+  text-align:center;
+  line-height:200px;
+  font-weight:bold;
+}
+
+.posts {
+  width:40%;
+  min-width:400px;
+  margin:20px auto;
+}
+
+.post {
+  margin-bottom:16px;
+}
+
+.tags {
+  list-style-type:none;
+  margin:0;
+}
+
+.tags li {
+  display:inline-block;
+  border: solid 2px #ff8400;
+  color:#ff8400;
+  color:#ccc;
+  border-color:#ccc;
+  font-weight:bold;
+  border-radius:4px;
+  padding:2px 6px;
+  margin-right:4px;
+}
+
+.main-post {
+  margin:0 auto;
+  width:40%;
+  min-width:500px; 
+}
+
+.divider {
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-bottom:solid 1px #ddd;
+}

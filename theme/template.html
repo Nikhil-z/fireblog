@@ -1,13 +1,27 @@
-<div>
-  <h1>{{name}}</h1>
-  <h5>{{subtitle}}</h5>
-  <div class='posts'>
-    <div ng-repeat='(name, post) in posts'>
+<header>
+  <h1 class='logo'>{{name}}</h1>
+</header>
+
+<div class='posts'>
+  <div class='post' ng-repeat='(name, post) in posts'>
+    
+    <div class='header'>
       <h3>
         <a href='#/post/{{name}}'>{{post.title}}</a>
       </h3> 
       <label>{{post.date}}</label>
+    </div>
+    
+    <div class='body'>
       <div>{{post.content}}</div>
     </div>
+    
+    <div class='footer'>  
+      <ul class='tags'>
+        <li ng-repeat='tag in post.tags'>{{tag}}</li>
+      </ul>
+    </div>
+  
   </div>
 </div>
+
