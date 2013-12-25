@@ -1,25 +1,21 @@
 @import 'mixins';
 
-$sidebar-width: 180px;
+$sidebar-width: 220px;
 
 html, body {
   @include max;
-  background-color:#f2f2f2;
+  background: #ff8400;
+  background: -moz-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%); 
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ff8400), color-stop(57%,#ff5200), color-stop(57%,#ff8400));
+  background: -webkit-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%);
+  background: -o-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%);
+  background: -ms-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%);
+  background: linear-gradient(135deg, #ff8400 0%,#ff5200 57%,#ff8400 57%);
+  background-attachment:fixed;
 }
 
 .admin-header {
-  position:relative;
-  width:auto;
-  background-color:#FF5200;
-  overflow:hidden;
-  background: #ff8400; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ff8400), color-stop(57%,#ff5200), color-stop(57%,#ff8400)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #ff8400 0%,#ff5200 57%,#ff8400 57%); /* IE10+ */
-  background: linear-gradient(135deg, #ff8400 0%,#ff5200 57%,#ff8400 57%); /* W3C */
-
+  
 }
 
 .admin-logo {
@@ -55,11 +51,56 @@ html, body {
   left:0;
   height:100%;
   width:$sidebar-width;
-  background-color:red;
+  background-color:transparent;
 }
 
-.admin-content {
+.search.box {
+  padding:10px;
+}
+
+input.search {
+  border-radius:8px;
+  border:none;
+}
+
+.recent.posts {
+  @include reset;
+  list-style-type:none;
+}
+
+.recent.posts .post {
+  border-bottom:solid 3px rgba(255, 255, 255, 0.3);
+  color:rgba(255, 255, 255, 0.3);
+}
+
+.admin-workspace {
   width:auto;
+  height:100%;
   margin-left:$sidebar-width;
-  background-color:blue;
+  background-color:#f2f2f1;
+  position:relative;
+}
+
+.markdown {
+  cursor:text;
+  background-color:inherit;
+  border:none;
+  resize:none;
+}
+
+.markdown:focus {
+  background-color:inherit;
+  box-shadow:none;
+  border:none;
+}
+
+.half-width-window {
+  padding:10px;
+  width:50%;
+  max-width:50%;
+  overflow-y:scroll;
+  overflow-x:none;
+  height:100%;
+  color:#888;
+  float:left;
 }
