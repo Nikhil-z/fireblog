@@ -19,10 +19,16 @@
     </div>
   
     <div class='admin-workspace'> 
-      <textarea class='half-width-window markdown' ng-change='update()' ng-model='markdown'>
-      </textarea>
-      <div class='half-width-window preview' btf-markdown='markdown'></div>
-    </div>
+      <div class='edit window'> 
+        <textarea class='half-width-window markdown' typing-duration='3000' 
+          after-typing='update()' ng-model='markdown'>
+        </textarea>
+        <div id='output' class='half-width-window preview' btf-markdown='markdown'></div>
+      </div>
+      <div class='publish controls'>
+        <button class='publish' ng-click='publish()'>Publish</button>
+      </div>
+   </div>
 
   </div>
 

@@ -3,42 +3,14 @@
 $sidebar-width: 220px;
 
 @mixin gradient {
-  background-image:url(/lib/img/bg.png);
+  /*background-image:url(/lib/img/bg.png);*/
+  background-color:#222;
 }
 
 html, body {
   @include max;
   @include gradient;
 }
-
-.loader {
-  background-image:url(/lib/img/load.gif);
-  background-position-x:center;
-  width:18px;
-  height:26px;
-  overflow:visible;
-  margin:4px auto;
-}
-.loader:before {
-  content:'';
-  display:block;
-  background-image:url(/lib/img/load.gif);
-  background-position-x:center;
-  width:18px;
-  height:26px;
-  margin-left:-14px;
-}
-.loader:after {
-  content:' ';
-  display:block;
-  background-image:url(/lib/img/load.gif);
-  background-position-x:center;
-  width:18px;
-  height:26px;
-  margin-top:-26px;
-  margin-left:14px;
-}
-
 
 .login.cover {
   @include max;
@@ -205,4 +177,30 @@ input.search:after {
   height:100%;
   color:#888;
   float:left;
+}
+
+$bottom-bar-height: 50px;
+
+.edit.window {
+  height:100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  padding-bottom:$bottom-bar-height;
+}
+
+.publish.controls {
+  padding:4px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:$bottom-bar-height;
+  background-color:#fff;
+  border-top:solid 1px #ddd;
+}
+
+.publish.controls button.publish {
+  border-radius:4px;
+  padding:12px;
 }
