@@ -11,7 +11,10 @@
       <h3>
         <a href='#/post/{{name}}'>{{post.title}}</a>
       </h3>
-      <label>{{post.date.day}}:{{post.date.month}}:{{post.date.year}}</label>
+      <label>
+        {{post.date.day}}-{{post.date.month}}-{{post.date.year}}
+        {{post.date.hour}}:{{post.date.minute}}:{{post.date.second}}
+      </label>
     </div>
     
     <div class='body'>

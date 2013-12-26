@@ -5,7 +5,9 @@
       </div>
       
       <ul class='recent posts'>
-        <li></li>            
+        <li ng-repeat='post in posts'>
+          {{post.title}}
+        </li>            
       </ul>
 
       <ul class='features'>
@@ -26,6 +28,8 @@
         <div id='output' class='half-width-window preview' btf-markdown='markdown'></div>
       </div>
       <div class='publish controls'>
+        <label>Post Title:</label>
+        <input type='text' ng-model='title'></input>
         <button class='publish' ng-click='publish()'>Publish</button>
       </div>
    </div>

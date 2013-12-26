@@ -200,6 +200,14 @@ $bottom-bar-height: 50px;
   border-top:solid 1px #ddd;
 }
 
+.publish.controls>* {
+  display:inline-block;
+}
+
+.publish.controls input {
+  width:400px;
+}
+
 .publish.controls button.publish {
   border-radius:4px;
   padding:12px;
