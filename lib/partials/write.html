@@ -25,7 +25,8 @@
         <textarea class='half-width-window markdown' typing-duration='3000' 
           after-typing='update()' ng-model='markdown'>
         </textarea>
-        <div id='output' class='half-width-window preview' btf-markdown='markdown'></div>
+        <div id='output' class='half-width-window preview' 
+          btf-markdown='"#" + title + "\n\n"  + markdown'></div>
       </div>
       <div class='publish controls'>
         <label>Post Title:</label>

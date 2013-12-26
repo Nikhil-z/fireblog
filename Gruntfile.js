@@ -13,7 +13,8 @@ module.exports = function(grunt) {
           'lib/components/angular/angular.min.js',
           'lib/components/firebase/lib/firebase.js',
           'lib/components/angularfire/angularfire.min.js',
-          'lib/components/angular-route/angular-route.min.js'
+          'lib/components/angular-route/angular-route.min.js',
+          'lib/components/angular-sanitize/angular-sanitize.js'
         ],
         dest: 'dst/blog-lib.js'
       },
