@@ -1,40 +1,31 @@
- <div class='admin-sidebar'>
-      <h3 class='admin-logo'>FireBlog</h3>
-      <div class='search box'>
-        <input type='text' class='search' placeholder='Search...'></input>
+ 
+    <div class='admin workspace'> 
+      <div class='top bar'>
+        <a href='/#' class='menu item icon'>
+           <i class='fa fa-bars'></i>
+        </a>
+        <div class='menu item'>
+          <h5 class='logo'>FireBlog</h5>
+        </div>
+        <div class='menu item input'>
+          <input type='text' class='post title' ng-model='title'></input>
+        </div>
       </div>
-      
-      <ul class='recent posts'>
-        <li ng-repeat='post in posts'>
-          {{post.title}}
-        </li>            
-      </ul>
 
-      <ul class='features'>
-        <li>
-          <i class='fa fa-question'></i>
-          <i class='fa fa-bars'></i>
-          <i class='fa fa-sign-out'></i>
-        </li>
-      </ul>
-
-    </div>
-  
-    <div class='admin-workspace'> 
       <div class='edit window'> 
-        <textarea class='half-width-window markdown' typing-duration='3000' 
+        <textarea class='half width window markdown' typing-duration='3000' 
           after-typing='update()' ng-model='markdown'>
         </textarea>
-        <div id='output' class='half-width-window preview' 
+        <div id='output' class='half width window preview' 
           btf-markdown='"#" + title + "\n\n"  + markdown'></div>
       </div>
-      <div class='publish controls'>
-        <label>Post Title:</label>
-        <input type='text' ng-model='title'></input>
-        <button class='publish' ng-click='publish()'>Publish</button>
+      <div class='bottom bar'>
+        <a href='/#' class='menu item icon'>
+          <i class='fa fa-trash-o'></i>
+        </a>
+ 
       </div>
    </div>
 
-  </div>
 
 
