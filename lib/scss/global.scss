@@ -3,3 +3,10 @@
 html, body {
   @include reset;   
 }
+
+
+.loader {
+  background-image:url(/lib/img/load.gif);
+  width:32px;
+  height:32px;
+}

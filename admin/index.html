@@ -6,7 +6,8 @@
 
   <link rel='stylesheet' href='/lib/components/foundation/css/normalize.css'>
   <link rel='stylesheet' href='/lib/components/foundation/css/foundation.css'>
-
+  <link rel='stylesheet' href='/lib/components/font-awesome/css/font-awesome.min.css'>
+  
   <link rel='stylesheet' href='/lib/css/fonts.css'>
   <link rel='stylesheet' href='/lib/css/admin.css'>
   
@@ -25,28 +26,7 @@
   <script src='/lib/js/directives.js'></script>  
 </head>
 <body>
-  <div class='admin-page'>
+  <div class='admin-page' ng-view>
 
-    <div class='admin-sidebar'>
-      <h3 class='admin-logo'>FireBlog</h3>
-      <div class='search box'>
-        <input type='text' class='search' placeholder='Search...'></input>
-      </div>
-      <ul class='recent posts'>
-        <li class='post'>
-          <h5>My Second Post</h5>
-          <label>25.12.13</label>
-        </li>
-        <li class='post'>
-          <h5>My First Post</h5>
-          <label>24.12.13</label>
-        </li>
-      </ul>
-
-    </div>
-  
-    <div class='admin-workspace' ng-view>
-    </div>
-  </div>
-</body>
+   </body>
 </html>

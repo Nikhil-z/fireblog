@@ -1,14 +1,70 @@
 html, body {
   width: 100%;
   height: 100%;
-  background: #ff8400;
-  background: -moz-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ff8400), color-stop(57%, #ff5200), color-stop(57%, #ff8400));
-  background: -webkit-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
-  background: -o-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
-  background: -ms-linear-gradient(-45deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
-  background: linear-gradient(135deg, #ff8400 0%, #ff5200 57%, #ff8400 57%);
-  background-attachment: fixed; }
+  background-image: url(/lib/img/bg.png); }
+
+.loader {
+  background-image: url(/lib/img/load.gif);
+  background-position-x: center;
+  width: 18px;
+  height: 26px;
+  overflow: visible;
+  margin: 4px auto; }
+
+.loader:before {
+  content: '';
+  display: block;
+  background-image: url(/lib/img/load.gif);
+  background-position-x: center;
+  width: 18px;
+  height: 26px;
+  margin-left: -14px; }
+
+.loader:after {
+  content: ' ';
+  display: block;
+  background-image: url(/lib/img/load.gif);
+  background-position-x: center;
+  width: 18px;
+  height: 26px;
+  margin-top: -26px;
+  margin-left: 14px; }
+
+.login.cover {
+  width: 100%;
+  height: 100%;
+  background-image: url(/lib/img/bg.png);
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.login.cover .login.form {
+  width: 300px;
+  text-align: center;
+  margin: 200px auto; }
+  .login.cover .login.form input {
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 3px #fff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18pt; }
+  .login.cover .login.form h1 {
+    font-size: 28pt; }
+
+.social button {
+  border-radius: 4px;
+  font-size: 18pt;
+  padding: 16px;
+  text-align: center;
+  width: 70px; }
+
+button.facebook {
+  background-color: #3b5998; }
+
+button.github {
+  background-color: #eee;
+  color: #444; }
 
 .admin-logo {
   z-position: 10;
@@ -16,17 +72,6 @@ html, body {
   text-align: center;
   color: #fff;
   font-weight: bold; }
-
-.asdmin-header-pattern {
-  position: absolute;
-  z-position: 0;
-  top: -300px;
-  right: -200px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 500px 500px 500px;
-  border-color: transparent transparent #ff8400 transparent; }
 
 .admin-page {
   width: 100%;
@@ -48,14 +93,52 @@ input.search {
   border-radius: 8px;
   border: none; }
 
+input.search:after {
+  content: '<i class="fa fa-search"></i>'; }
+
 .recent.posts {
   padding: 0;
   margin: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  background-color: #f2f2f2;
+  padding: 10px; }
 
 .recent.posts .post {
-  border-bottom: solid 3px rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.3); }
+  overflow: hidden; }
+  .recent.posts .post .date.square {
+    float: right;
+    width: 50px;
+    text-align: center;
+    background-color: #fff;
+    color: #ff8400;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold; }
+  .recent.posts .post .title {
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    max-width: 150px;
+    padding-right: 8px; }
+
+.features {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding: 10px;
+  font-size: 14pt; }
+
+.features li {
+  text-align: center;
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8); }
+
+.features li:hover {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.features li i {
+  cursor: pointer;
+  padding: 0 8px;
+  text-align: right; }
 
 .admin-workspace {
   width: auto;
