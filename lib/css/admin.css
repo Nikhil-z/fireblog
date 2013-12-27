@@ -120,6 +120,9 @@ button.github {
   line-height: 40px;
   display: inline-block;
   height: 100%; }
+  .bar .menu.item h1, .bar .menu.item h2, .bar .menu.item h3, .bar .menu.item h4, .bar .menu.item h5, .bar .menu.item h6 {
+    color: #666;
+    font-weight: bold; }
 
 .menu.item.right {
   float: right; }

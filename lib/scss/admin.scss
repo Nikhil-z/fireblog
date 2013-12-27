@@ -148,6 +148,11 @@ $bar-pad: 4px;
   line-height:$bar-height; 
   display:inline-block;
   height:100%;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color:#666;
+    font-weight:bold;
+  }
 }
 
 .menu.item.right {
