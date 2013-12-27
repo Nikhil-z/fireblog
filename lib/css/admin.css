@@ -115,10 +115,14 @@ button.github {
 
 .bar .menu.item {
   float: left;
+  margin: 0;
   padding: 4px;
   line-height: 40px;
   display: inline-block;
   height: 100%; }
+
+.menu.item.right {
+  float: right; }
 
 .bar .menu.item.icon i {
   display: block;
@@ -129,20 +133,34 @@ button.github {
   background-color: #444; }
 
 .bar .menu.item.input {
+  padding: 0; }
+
+.bar .menu.item.button {
   padding: 0;
-  margin: 0 4px;
-  font-size: 16pt; }
+  background-color: transparent;
+  border: none; }
+
+.bar button {
+  padding: 0 8px;
+  line-height: 38px;
+  margin: 0;
+  border: none; }
+
+button.danger {
+  background-color: #C72727; }
 
 .bar .logo {
   color: #777;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 0 8px; }
 
 .bar input.post.title {
   height: 100%;
   border: none;
   background-color: #444;
   font-weight: bold;
-  color: #888; }
+  color: #888;
+  padding: 0 4px; }
 
 .bar input:focus {
   box-shadow: none;

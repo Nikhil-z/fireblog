@@ -143,10 +143,15 @@ $bar-pad: 4px;
 
 .bar .menu.item {
   float:left;
+  margin:0;
   padding:$bar-pad;
   line-height:$bar-height; 
   display:inline-block;
   height:100%;
+}
+
+.menu.item.right {
+  float:right;
 }
 
 .bar .menu.item.icon i {
@@ -161,13 +166,29 @@ $bar-pad: 4px;
 
 .bar .menu.item.input {
   padding:0;
-  margin:0 4px;
-  font-size:16pt;
+}
+
+.bar .menu.item.button {
+  padding:0;
+  background-color:transparent;
+  border:none;
+}
+
+.bar button {
+  padding:0 8px;
+  line-height:$bar-height - 2px;
+  margin:0;
+  border:none;
+}
+
+button.danger {
+  background-color:#C72727;
 }
 
 .bar .logo {
   color:#777;
   font-weight:bold;
+  padding:0 8px;
 }
 
 .bar input.post.title {
@@ -176,6 +197,7 @@ $bar-pad: 4px;
   background-color:#444;
   font-weight:bold;
   color:#888;
+  padding:0 4px;
 }
 
 .bar input:focus {

@@ -8,7 +8,14 @@
           <h5 class='logo'>FireBlog</h5>
         </div>
         <div class='menu item input'>
-          <input type='text' class='post title' ng-model='title'></input>
+          <input type='text' class='post title' ng-model='title' 
+            after-typing='update()'></input>
+        </div>
+        <div class='menu item button right'>
+          <button>Publish</button>
+        </div>
+        <div class='menu item button right'>
+          <button class='danger'>Clear</button>
         </div>
       </div>
 
@@ -20,10 +27,12 @@
           btf-markdown='"#" + title + "\n\n"  + markdown'></div>
       </div>
       <div class='bottom bar'>
-        <a href='/#' class='menu item icon'>
-          <i class='fa fa-trash-o'></i>
-        </a>
- 
+        <div class='menu item button' ng-repeat='tag in suggestedTags'>
+          <button>{{tag}}</button>
+        </div>
+        <div class='menu item icon right'>
+          <i class='fa fa-save' ng-show='saving'></i>
+        </div>
       </div>
    </div>
 
