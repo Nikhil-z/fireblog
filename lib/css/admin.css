@@ -106,7 +106,7 @@ button.github {
   bottom: 0;
   left: 0; }
 
-.bar input {
+.bar input.post.title {
   width: 400px; }
 
 .bar button.publish {
@@ -114,6 +114,7 @@ button.github {
   padding: 12px; }
 
 .bar .menu.item {
+  transition-duration: 0.5s;
   float: left;
   margin: 0;
   padding: 4px;
@@ -127,13 +128,74 @@ button.github {
 .menu.item.right {
   float: right; }
 
+.bar .menu.item.icon {
+  width: 40px;
+  max-width: 40px; }
+
 .bar .menu.item.icon i {
   display: block;
   height: 32px;
+  text-align: center;
   line-height: 32px; }
 
 .bar .menu.item:hover {
+  transition-duration: 0.5s;
   background-color: #444; }
+
+.bar .menu.item.drop {
+  position: relative;
+  color: #008cba; }
+  .bar .menu.item.drop .dropdown {
+    overflow: hidden;
+    display: none;
+    cursor: default;
+    background-color: #333;
+    top: 44px;
+    left: 0;
+    margin-left: -4px;
+    width: 220px; }
+    .bar .menu.item.drop .dropdown .heading {
+      padding: 4px; }
+
+.recent.posts {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+  .recent.posts li {
+    padding: 4px; }
+  .recent.posts li:hover {
+    transition-duration: 0.5s;
+    cursor: pointer;
+    background-color: #444; }
+  .recent.posts .date, .recent.posts .title {
+    padding: 0;
+    margin: 0; }
+  .recent.posts .date {
+    color: #008cba; }
+  .recent.posts .title {
+    color: #777; }
+
+.search {
+  position: relative; }
+  .search input {
+    background-color: #222;
+    width: 100%;
+    display: block;
+    margin: 0;
+    color: #666;
+    font-weight: bold;
+    border: none; }
+    .search input:focus {
+      border: none;
+      background-color: #222; }
+  .search i {
+    position: absolute;
+    right: 4px;
+    top: 0;
+    color: #444; }
+
+.bar .menu.item.drop:hover .dropdown {
+  display: block; }
 
 .bar .menu.item.input {
   padding: 0; }
@@ -168,3 +230,11 @@ button.danger {
 .bar input:focus {
   box-shadow: none;
   border: none; }
+
+.tag:hover i {
+  display: inline-block;
+  color: #82BCD8; }
+
+.tag i {
+  display: none;
+  margin: 0 4px; }

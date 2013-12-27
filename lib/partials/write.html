@@ -1,9 +1,27 @@
  
     <div class='admin workspace'> 
       <div class='top bar'>
-        <a href='/#' class='menu item icon'>
-           <i class='fa fa-bars'></i>
-        </a>
+        <div class='menu item icon drop'>
+          <i class='fa fa-bars'></i>
+          <div class='dropdown'>
+            <h5 class='heading'>Recent Posts</h5>
+
+            <div class='search'>
+              <input type='text' ng-model='search'></input>
+              <i class='fa fa-search'></i>
+            </div>
+
+            <ul class='recent posts'>
+              <li ng-repeat='post in posts | filter:search | limitTo:10'>
+                <strong class='date'>
+                  {{post.date.day}}/{{post.date.month}}/{{post.date.year}}
+                </strong>
+                <span class='title'>{{post.title}}</span>
+              </li>
+            </ul>
+
+         </div>
+        </div>
         <div class='menu item'>
           <h5 class='logo'>FireBlog</h5>
         </div>
@@ -15,7 +33,7 @@
           <button ng-click='publish()'>Publish</button>
         </div>
         <div class='menu item button right'>
-          <button class='danger'>Clear</button>
+          <button class='danger' ng-click='reset()'>Clear</button>
         </div>
       </div>
 
@@ -24,6 +42,7 @@
           after-typing='update()' ng-model='markdown'>
         </textarea>
         <div id='output' class='half width window preview' 
+          ng-show='markdown || title' 
           btf-markdown='"#" + title + "\n\n"  + markdown'></div>
       </div>
       <div class='bottom bar'>
@@ -31,7 +50,9 @@
           <h5>Suggested Tags:</h5>
         </div>
         <div class='menu item button' ng-repeat='tag in suggestedTags'>
-          <button>{{tag}}</button>
+          <button class='tag'>
+            {{tag}}<i class='fa fa-times'></i>
+          </button>
         </div>
         <div class='menu item icon right'>
           <i class='fa fa-save' ng-show='saving'></i>

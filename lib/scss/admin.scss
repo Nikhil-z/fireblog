@@ -130,7 +130,7 @@ $bar-height: 40px;
   left:0;
 }
 
-.bar input {
+.bar input.post.title {
   width:400px;
 }
 
@@ -142,6 +142,7 @@ $bar-height: 40px;
 $bar-pad: 4px;
 
 .bar .menu.item {
+  transition-duration: 0.5s;
   float:left;
   margin:0;
   padding:$bar-pad;
@@ -159,14 +160,96 @@ $bar-pad: 4px;
   float:right;
 }
 
+.bar .menu.item.icon {
+  width:$bar-height;
+  max-width:$bar-height;
+}
+
 .bar .menu.item.icon i {
   display:block;
   height:$bar-height - $bar-pad * 2;
+  text-align:center;
   line-height:$bar-height - $bar-pad * 2;
 }
 
 .bar .menu.item:hover {
+  transition-duration: 0.5s;
   background-color:#444;
+}
+
+.bar .menu.item.drop {
+  position:relative;
+  color:#008cba;
+ 
+  .dropdown {
+    overflow:hidden;
+    display:none;
+    cursor:default;
+    background-color:#333;
+    top:$bar-height + $bar-pad;
+    left:0;
+    margin-left:-$bar-pad; 
+    width:220px;
+    
+    .heading {
+      padding:4px;
+    }
+  } 
+}
+
+.recent.posts {
+  @include reset;
+  list-style-type:none;
+
+  li {
+    padding:4px;
+  }
+    
+  li:hover {
+    transition-duration: 0.5s;
+    cursor:pointer;
+    background-color:#444;
+  }
+    
+  .date, .title {
+    @include reset;
+  }
+  .date {
+    color:#008cba;
+  }  
+  .title {
+    color:#777;
+  }
+}
+
+.search {
+  position:relative;
+ 
+  input {
+    background-color:#222;
+    width:100%;
+    display:block;
+    margin:0;
+    color:#666;
+    font-weight:bold;
+ 
+    border:none;
+    &:focus {
+      border:none;
+      background-color:#222;
+    }
+  }
+  
+  i {
+    position:absolute;
+    right:4px;
+    top:0;
+    color:#444;
+  }
+}
+
+.bar .menu.item.drop:hover .dropdown {
+  display:block;
 }
 
 .bar .menu.item.input {
@@ -208,4 +291,14 @@ button.danger {
 .bar input:focus {
   box-shadow:none;
   border:none;
+}
+
+.tag:hover i {
+  display:inline-block;
+  color:#82BCD8;
+}
+
+.tag i {
+  display:none;
+  margin:0 4px;
 }
