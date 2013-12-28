@@ -31,14 +31,16 @@
             after-typing='edited()'></input>
         </div>
         <div class='menu item button right'>
-          <button ng-click='publish()' ng-hide='editMode'>Publish</button>
-          <button ng-click='update()' ng-show='editMode'>Update</button>
+          <button ng-click='editMode && update() || publish()'>
+            <span ng-hide='editMode'>Publish</span>
+            <span ng-show='editMode'>Update</span>
+          </button>
         </div>
         <div class='menu item button right'>
-          <button class='danger' ng-click='reset()' ng-hide='editMode'>
-            Clear</button>
-          <button class='danger' ng-click='delete()' ng-show='editMode'>
-            Delete<button>
+          <button ng-click='editMode && delete() || clear()' class='danger'>
+            <span ng-hide='editMode'>Clear</span>
+            <span ng-show='editMode'>Delete</span>
+          </button>    
         </div>
       </div>
 
